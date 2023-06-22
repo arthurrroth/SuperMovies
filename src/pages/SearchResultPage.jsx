@@ -1,15 +1,14 @@
-import React, { useContext, useEffect } from 'react'
-import { MovieDataContext } from '../Context'
 
 const SearchResultPage = () => {
-    const { movieData, setMovieData } = useContext(MovieDataContext);
-
-    useEffect(() => {
-        console.log({movieData});
-    }, [])
-  return (
-    <div>SearchResultPage</div>
-  )
-}
+    
+  
+    return (
+      <div>
+        <h2>SearchResultPage</h2>
+      </div>
+    );
+  };
+  
+  
 
 export default SearchResultPage
