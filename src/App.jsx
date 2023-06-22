@@ -54,10 +54,9 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/landing' element={<LandingPage/>}/>
-          {/* <Route path='/' element={<HomePage/>}/> */}
+          <Route path='/' element={<HomePage/>}/>
           <Route path='/search' element={<SearchResultPage/>}/>
-          {/* <Route path='/movie/:id' element={<MovieDetailsPage/>}/> */}
-          <Route path='/' element={<MovieDetailsPage/>}/>
+          <Route path='/movie/:id' element={<MovieDetailsPage/>}/>
           <Route path='/movie/:id/video-player' element={<VideoPlayerPage/>}/>
         </Routes>
       </BrowserRouter>
