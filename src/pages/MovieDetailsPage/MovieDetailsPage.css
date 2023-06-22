@@ -1,0 +1,47 @@
+.detailBackgroundContainer{
+    height: 20rem;
+}
+
+.detailImg{
+    height: 20rem;
+}
+
+.detailHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detailHeaderInformation{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detailStarRating{
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+
+}
+
+.seeMoreBtn{
+    color: var(--text-color-red);
+    border: none;
+    background: none;
+    padding-left: 1rem;
+}
+
+.detailPlayBtn{
+    width: 226.05px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    color: var(--element-color-white);
+    background-color: var(--element-color-red);
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 15px 35px;
+    gap: 20px;
+}
