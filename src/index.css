@@ -24,6 +24,8 @@
 :root {
   --main-padding: 28px;
 
+  --test-color: rgb(255, 164, 164);
+
   --text-color-black: black;
   --text-color-red: #FC2121;
 
