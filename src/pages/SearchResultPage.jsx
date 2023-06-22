@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { MovieDataContext } from '../Context'
+import NavBar from '../components/NavBar'
 
 const SearchResultPage = () => {
     const { movieData, setMovieData } = useContext(MovieDataContext);
@@ -8,7 +9,7 @@ const SearchResultPage = () => {
         console.log({movieData});
     }, [])
   return (
-    <div>SearchResultPage</div>
+    <div>SearchResultPage<NavBar /></div>
   )
 }
 
