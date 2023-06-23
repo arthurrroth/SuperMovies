@@ -1,31 +1,39 @@
 import React from 'react'
 import "./LandingPage.css"
-import MeinBild from '../assets/img/home.png'
+import LandingImage1 from '../assets/img/home.png'
+import LandingImage2 from '../assets/img/description.png'
+import ellipsesvg1 from '../assets/svg/ellipse.svg';
 
 const LandingPage = () => {
   return (
     <div>
       <body> 
-    <div className="div2">
-        <img className="pic2" src="MeinBild" alt="#"/>
+      
+      <div>
+        <img className='LandingImage1' src={LandingImage1} alt="#" />
+        <img className='LandingImage2' src={LandingImage2} alt="#" />
+      </div>
+          <div className="BackGround">
+            <div className='ellipsesvg1'>
+
+        </div>
+    </div>
+      
+      <div className="LandingDiv">
+        <h2>Enjoy Your Movie</h2>
+          <h2>Watch Everywhere</h2>
+            <div className='LandingP'>
+              <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+      </div>
+        <button className="LandingButton">Get Started</button>
     </div>
 
-    <div className="pic1"><img className="pic1" src="./assets/img/Description Movie – 1.png" alt="#"/>
-    </div>
-
-    <div className="div1">
-        
-    </div>
-    <div className="div">
-   <h1>Enjoy Your Movie<br />Watch Everywhere</h1>
-   <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
-   <button className="gsButton">Get Started</button>
-
-</div>
-    <script src="main.js"></script>
+      <script src="main.js"></script>
 </body>
     </div>
   )
 }
+
+
 
 export default LandingPage
