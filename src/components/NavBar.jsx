@@ -19,7 +19,7 @@ const NavBar = () => {
 
   const isHomePage =
     location.pathname === "/" ||
-    location.pathname === "/Search" ||
+    location.pathname === "/search:searchParam" ||
     location.pathname.startsWith("/search");
 
   useEffect(() => {

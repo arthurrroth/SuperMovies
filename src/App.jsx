@@ -72,7 +72,7 @@ const App = () => {
             <Routes>
               <Route path='/landing' element={<LandingPage/>}/>
               <Route path='/' element={<HomePage/>}/>
-              <Route path='/search/:searchParam' element={<SearchResultPage/>}/>
+              <Route path='/search/' element={<SearchResultPage/>}/>
               <Route path='/movie/:id' element={<MovieDetailsPage/>}/>
               <Route path='/movie/:id/video-player' element={<VideoPlayerPage/>}/>
               <Route path='/download' element={<DownloadPage/>}/>
