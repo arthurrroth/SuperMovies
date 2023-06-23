@@ -24,7 +24,7 @@
 :root {
   --main-padding: 28px;
 
-  --test-color: rgb(255, 164, 164);
+  --test-color: rgb(255, 216, 216);
 
   --text-color-black: black;
   --text-color-red: #FC2121;
@@ -99,4 +99,16 @@ p {
 button {
   font-family: "Poppins-Medium";
   font-size: 1.6rem;
+}
+
+.section-header {
+  display: flex;
+  width: 370px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#search-tags {
+  color: #676767;
+  font-family: "Poppins-Medium";
 }

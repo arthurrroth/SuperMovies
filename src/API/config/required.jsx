@@ -16,7 +16,9 @@ const GET_options = {
 
     const response = await fetch(url, GET_options);
     const data = await response.json();
-        return data;
+
+    return data
+    
 
 
    } catch (error) {
@@ -37,7 +39,7 @@ const GET_options = {
 
     
 
-// export const OptionsImg = fetchedData('https://api.themoviedb.org/3/configuration').images;
+export const OptionsImg = fetchedData('https://api.themoviedb.org/3/configuration');
 // export const Countries3166_1i = fetchedData('https://api.themoviedb.org/3/configuration/countries');
 // export const JobsInFilm = fetchedData('https://api.themoviedb.org/3/configuration/jobs');
 // export const Languages639_1i = fetchedData('https://api.themoviedb.org/3/configuration/languages');
@@ -53,3 +55,4 @@ const GET_options = {
 // export const RecentlyUpdatedTvSeries = fetchedData('https://api.themoviedb.org/3/tv/changes');
 
 export const DiscoveredMovies = getDiscoveredMovies();
+export const Genres_Movies = fetchedData('https://api.themoviedb.org/3/genre/movie/list')
