@@ -1,7 +1,7 @@
 import './MovieDetailsPage.css'
 
 import { useContext, useEffect, useState } from 'react';
-import { Link, redirect, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate, Navigate } from 'react-router-dom';
 import { MovieDataContext } from '../../Context';
 
 // Icons
@@ -14,18 +14,15 @@ import NavBar from '../../components/NavBar.jsx'
 
 
 const MovieDetailsPage = () => {
+  const navigate = useNavigate();
   const { detailedMovies } = useContext(MovieDataContext);
   const [selectedMovie, setSelectedMovie] = useState();
-  const [IMG_options, setIMG_Options] = useState();
   // const { id } = useParams()
   const [id, setId] = useState(385687);
   const [seeMore, setSeeMore] = useState(false)
   
-    const getIMG_Options = async () => {
-      const options = await OptionsImg;
-      setIMG_Options(options.images);
-    }
   
+    // Get data
     useEffect(() => {
       if (detailedMovies) {
         let selectedMovie = detailedMovies.filter(movie => {
@@ -42,7 +39,7 @@ const MovieDetailsPage = () => {
     
     }, [selectedMovie])
 
-    // Minuten in Stunde/Minuten umrechnen
+    // Minutes in hours:minutes 
     const toHHMM = (totalMinutes) => {
       const minutes = totalMinutes % 60;
       const hours = Math.floor(totalMinutes / 60);
@@ -60,9 +57,8 @@ const MovieDetailsPage = () => {
         <div className='detailBackgroundContainer'
           style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${selectedMovie.poster_path})`}} >
         
-          
-          {/* ##### Navigation zurück zur Suche ggf auch zurück zur HomePage ###### */}
           <Link to={"/"} className='detailGoBack'><img src={BackArrow} alt="Go Back" /></Link>
+          {/* <button onClick={() => navigate(-1)} className='detailGoBack'><img src={BackArrow} alt="Go Back" /></button> */}
 
           <div className='detailHeader'>
             <p>Movie Details</p>
@@ -113,7 +109,6 @@ const MovieDetailsPage = () => {
               </div>
             </div>
 
-            {/* ##### LINK GGF ANPASSEN ##### */}
             <Link to={"/movie/:id/video-player"} className='detailPlayBtn'> <img src={PlayBtn} alt='Play'/>
             Watch Trailer</Link>
           </article>
