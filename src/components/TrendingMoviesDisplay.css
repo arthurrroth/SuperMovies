@@ -1,0 +1,49 @@
+.Display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trending-title a {
+    cursor: pointer;
+}
+
+.trending-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 3.5rem;
+}
+.vote-container {
+    /* position: absolute;
+    left: 57.5%;
+    bottom: 27.5%; */
+    color: var(--element-color-black);
+    letter-spacing: 0.25rem;
+}
+.trending-title a {
+    text-decoration: none;
+    color: var(--element-color-red);
+}
+.vote {
+    display: flex;
+}
+.star {
+    transform: scale(.8);
+
+}
+
+/* .img-container {
+    width: 70vw;
+    height: 50vw;
+} */
+
+.display-img {
+    object-position: 10%;
+    object-fit: cover;
+    padding: 5rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    /* width: 80%;
+    height: 80%; */
+}
+
