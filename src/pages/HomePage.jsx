@@ -1,3 +1,7 @@
+import React from 'react'
+
+import NavBar from '../components/NavBar'
+import TrendingMoviesDisplay from '../components/TrendingMoviesDisplay'
 import SearchSort from '../components/SearchSort';
 import './HomePage.css'
 import { Link } from 'react-router-dom';
@@ -7,7 +11,8 @@ const HomePage = () => {
     <div className='home'>
         <h1>Welcome</h1>
         <SearchSort/>
-        <Link to='/movie/:id'>Test Movie Details</Link>
+        <TrendingMoviesDisplay/>
+        <NavBar />
     </div>
   )
 }

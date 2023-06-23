@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useContext } from "react";
 import { MovieDataContext } from "../Context";
 import SearchIcon from "../assets/icons/SearchIcon";
@@ -12,6 +13,7 @@ const SearchSort = () => {
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [currentSearchInputString, setCurrentSearchInputString] = useState("");
   const [filteredMovies, setFilteredMovies] = useState([]);
+
 
   const [fill, setFill] = useState('#A4A3A3');
   const [SearchBarBorder, setSearchBarBorder] = useState({ '--border-color-1': 'rgb(250, 240, 240)' });
@@ -118,7 +120,6 @@ const handleMouseLeave = () => {
         </div>
        
     </div>
-  
       
   );
 }
