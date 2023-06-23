@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
 import NavBar from '../components/NavBar'
 import TrendingMoviesDisplay from '../components/TrendingMoviesDisplay'
 import SearchSort from '../components/SearchSort';
 import './HomePage.css'
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
