@@ -1,7 +1,7 @@
 import './MovieDetailsPage.css'
 
 import { useContext, useEffect, useState } from 'react';
-import { Link, useParams, useNavigate, Navigate } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { MovieDataContext } from '../../Context';
 
 // Icons
@@ -57,8 +57,8 @@ const MovieDetailsPage = () => {
         <div className='detailBackgroundContainer'
           style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${selectedMovie.poster_path})`}} >
         
-          <Link to={"/"} className='detailGoBack'><img src={BackArrow} alt="Go Back" /></Link>
-          {/* <button onClick={() => navigate(-1)} className='detailGoBack'><img src={BackArrow} alt="Go Back" /></button> */}
+          {/* <Link to={"/"} className='detailGoBack'><img src={BackArrow} alt="Go Back" /></Link> */}
+          <button onClick={() => navigate(-1)} className='detailGoBack'><img src={BackArrow} alt="Go Back" /></button>
 
           <div className='detailHeader'>
             <p>Movie Details</p>

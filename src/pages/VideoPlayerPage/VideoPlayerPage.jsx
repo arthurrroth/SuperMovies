@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
 import './VideoPlayerPage.css'
 import BackArrow from '../../assets/icons/BackArrow-Detail.svg'
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const VideoPlayerPage = () => {
+  const navigate = useNavigate();
   const [id, setId] = useState(385687);
   const [videoLink, setVideoLink] = useState()
 
@@ -27,7 +28,7 @@ const VideoPlayerPage = () => {
 
   return (
     <>
-    <Link to={"/movie/:id"} className='trailerGoBack'><img src={BackArrow} alt="Go Back"/></Link>
+    <button onClick={() => navigate(-1)} className='detailGoBack'><img src={BackArrow} alt="Go Back" /></button>
 
     <div className='videoContainer'>
       <iframe
