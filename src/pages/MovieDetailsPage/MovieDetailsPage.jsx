@@ -12,7 +12,7 @@ import PlayBtn from '../../assets/icons/PlayBtn.svg'
 // NavBar
 import NavBar from '../../components/NavBar.jsx'
 
-
+// # ID anpassen ==============
 const MovieDetailsPage = () => {
   const navigate = useNavigate();
   const { detailedMovies } = useContext(MovieDataContext);
@@ -51,13 +51,12 @@ const MovieDetailsPage = () => {
     
 
   return (
-    <>
+    <section className='movieDetailPage'>
     {selectedMovie ? (
       <article className='detailPage'>
         <div className='detailBackgroundContainer'
           style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${selectedMovie.poster_path})`}} >
         
-          {/* <Link to={"/"} className='detailGoBack'><img src={BackArrow} alt="Go Back" /></Link> */}
           <button onClick={() => navigate(-1)} className='detailGoBack'><img src={BackArrow} alt="Go Back" /></button>
 
           <div className='detailHeader'>
@@ -124,7 +123,7 @@ const MovieDetailsPage = () => {
           <NavBar />  
         </section>
       )} 
-    </>
+    </section>
   )
 }
 

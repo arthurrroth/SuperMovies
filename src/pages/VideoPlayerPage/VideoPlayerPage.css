@@ -2,6 +2,8 @@
     position: absolute;
     top: 2rem;
     left: 2rem;
+    background: none;
+    border: none;
 }
 
 .videoContainer{
