@@ -1,7 +1,9 @@
+
+
 import React, { useState, useEffect, useContext } from "react";
 import { MovieDataContext } from "../Context";
 import SearchIcon from "../assets/icons/SearchIcon";
-// import Carousel from "./Carousel";
+import Carousel from "./Carousel";
 
 
 const SearchSort = () => {
@@ -12,6 +14,8 @@ const SearchSort = () => {
  const [selectedGenres, setSelectedGenres] = useState([]);
  const [currentSearchInputString, setCurrentSearchInputString] = useState("");
  const [filteredMovies, setFilteredMovies] = useState([]);
+
+
 
 
  const [fill, setFill] = useState('#A4A3A3');
@@ -120,12 +124,29 @@ const handleMouseLeave = () => {
            />
            <SearchIcon fill={fill}/>
        </div>
-       {/* <Carousel/> */}
-   </div>
+       <div className="section-header">
+         <h5 id="search-tags">Genre Filter</h5>
+         <svg width="260" height="3" viewBox="0 0 318 3" fill="none" >
+         <path d="M0.5 1.5H318" stroke="#A8A8A8" strokeWidth="2"/>
+         </svg>
+       </div>
+         <Carousel/>
+       <div className="section-header">
+         <h5 id="search-tags">Sort Options</h5>
+         <svg width="260" height="3" viewBox="0 0 318 3" fill="none" >
+         <path d="M0.5 1.5H318" stroke="#A8A8A8" strokeWidth="2"/>
+         </svg>
+       </div>
      
+   </div>
+    
  );
 }
 
 
 export default SearchSort
+
+
+
+
 

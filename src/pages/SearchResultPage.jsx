@@ -1,16 +1,17 @@
-import React, { useContext, useEffect } from 'react'
-import { MovieDataContext } from '../Context'
-import NavBar from '../components/NavBar'
 
+import SearchSort from "../components/SearchSort";
+import NavBar from "../components/NavBar";
 const SearchResultPage = () => {
-    const { movieData, setMovieData } = useContext(MovieDataContext);
-
-    useEffect(() => {
-        console.log({movieData});
-    }, [])
-  return (
-    <div>SearchResultPage<NavBar /></div>
-  )
-}
+    
+  
+    return (
+      <div>
+        <h2>SearchResultPage</h2>
+        <SearchSort/>
+        <NavBar />
+      </div>
+    );
+  };
+  
 
 export default SearchResultPage
