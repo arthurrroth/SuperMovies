@@ -12,7 +12,8 @@
     align-items: center;
     padding-right: 10px;
     background-color: var(--element-color-lightgrey);
-    width: 40%;
+    width: 90%;
+    min-width: 231px;
     height: 40px;
     border-radius: 6px;
     border: 2px solid var(--border-color-1) ;
