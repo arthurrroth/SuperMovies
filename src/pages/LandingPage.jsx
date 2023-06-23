@@ -6,8 +6,8 @@ import ellipsesvg1 from '../assets/svg/ellipse.svg';
 
 const LandingPage = () => {
   return (
-    <div>
-      <body> 
+    <div className='landingPage'>
+       
       
       <div>
         <img className='LandingImage1' src={LandingImage1} alt="#" />
@@ -29,7 +29,7 @@ const LandingPage = () => {
     </div>
 
       <script src="main.js"></script>
-</body>
+
     </div>
   )
 }

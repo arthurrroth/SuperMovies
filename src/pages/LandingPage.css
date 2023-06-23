@@ -10,17 +10,23 @@
     position: absolute;
     flex-direction: column;
     height: 40vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 3;
-    background-color: White;
+    background-color: white;
     bottom: 0;
     padding: 0 4rem 0 4rem;
+    border-radius: 20px 20px 0 0;
+
 }
 
-
+.landingPage {
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+}
 
 
 
@@ -62,7 +68,6 @@
     justify-content: center;
     align-items: flex-end;
     height: 60vh;
-    background-color: red;
     background: radial-gradient(closest-side at 60% 55%, rgba(255, 255, 255));
 }
 
