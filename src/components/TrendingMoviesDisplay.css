@@ -1,6 +1,7 @@
 .Display {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 .trending-title a {
@@ -11,39 +12,87 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 3.5rem;
-}
-.vote-container {
-    /* position: absolute;
-    left: 57.5%;
-    bottom: 27.5%; */
-    color: var(--element-color-black);
-    letter-spacing: 0.25rem;
+    margin: 10% 2% 5%;
 }
 .trending-title a {
     text-decoration: none;
     color: var(--element-color-red);
 }
-.vote {
-    display: flex;
-}
 .star {
-    transform: scale(.8);
+    object-fit: contain;
 
 }
 
-/* .img-container {
-    width: 70vw;
-    height: 50vw;
-} */
+.img-container {
+    position: relative;
+    border-radius: 10rem;
+    margin: 5% 5% 2% 5%;
+    /* width: 100%; */
+    height: 100%;
+    cursor: pointer;
+}
 
 .display-img {
-    object-position: 10%;
+    border-radius: 5rem;
     object-fit: cover;
-    padding: 5rem;
-    border-radius: 10rem;
-    cursor: pointer;
-    /* width: 80%;
-    height: 80%; */
+    width: 100%;
+    height: 125vw;
+    bottom: 20%;
+}
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.title-container {
+    display: flex;
+    background: linear-gradient(0deg, #000000 0%,  transparent);
+    position: absolute;
+    bottom: 0px;
+    color: var(--element-color-white);
+    width: 100%;
+    padding: 0 6%;
+    height: 50%;
+    border-radius: 0 0 5rem 5rem;
+    align-items: end;
 }
 
+.title {
+    width: 65%;
+    letter-spacing: 1px;
+    padding: 25% 0;
+    /* line-height: 20%; */
+    text-align: left;
+}
+
+.circle-container {
+    margin-top: 5%;
+}
+
+.circle {
+    background-color: var(--element-color-darkgrey);
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.current-circle {
+    height: 2.5vw;
+    width: 5vw;
+    border-radius: 30rem;
+    background-color: #FC2121;
+    cursor: pointer;
+}
+
+.rated {
+    display: flex;
+    gap: 7.5px;
+    align-items:center;
+    margin-bottom: 10%;
+}
+.rated p {
+    letter-spacing: 1px;
+}

@@ -5,6 +5,9 @@ import HomePage from './pages/HomePage'
 import SearchResultPage from './pages/SearchResultPage'
 import MovieDetailsPage from './pages/MovieDetailsPage'
 import VideoPlayerPage from './pages/VideoPlayerPage'
+import DownloadPage from './pages/downloadpage/DownloadPage'
+import FavoritePage from './pages/favoritepage/FavoritePage'
+import ProfilePage from './pages/profilepage/ProfilePage'
 import { MovieDataContext } from './Context'
 import {  DiscoveredMovies} from './API/config/required';
 import { fetchedData } from './API/config/required'
@@ -60,6 +63,9 @@ const App = () => {
             <Route path='/search' element={<SearchResultPage/>}/>
             <Route path='/movie/:id' element={<MovieDetailsPage/>}/>
             <Route path='/movie/:id/video-player' element={<VideoPlayerPage/>}/>
+            <Route path='/download' element={<DownloadPage/>}/>
+            <Route path='/favorite' element={<FavoritePage />} />
+            <Route path='/profile' element={<ProfilePage />} />
           </Routes>
         </BrowserRouter>
       </MovieDataContext.Provider>
