@@ -33,7 +33,7 @@ const TrendingMoviesDisplay = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentMovieIndex((prevMovie) => (prevMovie + 1) % movies.length);
-    }, 400500);
+    }, 4500);
 
     return () => clearTimeout(timer);
   }, [currentMovieIndex, movies.length]);

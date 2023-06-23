@@ -25,7 +25,6 @@
 
 .img-container {
     position: relative;
-    border-radius: 10rem;
     margin: 5% 5% 2% 5%;
     /* width: 100%; */
     height: 100%;
@@ -33,10 +32,12 @@
 }
 
 .display-img {
-    border-radius: 5rem;
+    border-radius: 2.5rem;
     object-fit: cover;
-    width: 100%;
-    height: 125vw;
+    object-position: top;
+
+    width: 80vw;
+    height: 70vw;
     bottom: 20%;
 }
 .circle-container {
@@ -47,23 +48,24 @@
 }
 .title-container {
     display: flex;
-    background: linear-gradient(0deg, #000000 0%,  transparent);
+    background: linear-gradient(0deg, #000000 20%,  transparent);
     position: absolute;
     bottom: 0px;
     color: var(--element-color-white);
     width: 100%;
     padding: 0 6%;
     height: 50%;
-    border-radius: 0 0 5rem 5rem;
+    border-radius: 0 0 2.5rem 2.5rem;
     align-items: end;
 }
 
 .title {
     width: 65%;
     letter-spacing: 1px;
-    padding: 25% 0;
+    padding: 20% 0;
     /* line-height: 20%; */
     text-align: left;
+    font-weight: bold;
 }
 
 .circle-container {
@@ -96,3 +98,11 @@
 .rated p {
     letter-spacing: 1px;
 }
+
+
+@media only screen and (max-width: 767px) {
+    .display-img {
+        width: 400px;
+        height: 300px;
+    }
+  }
