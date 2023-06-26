@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import LandingPage from './pages/LandingPage/LandingPage'
+import LandingPage from './pages/landingpage/LandingPage'
 import HomePage from './pages/HomePage/HomePage'
 import SearchPage from './pages/SearchPage/SearchPage'
 import MovieDetailsPage from './pages/MovieDetailsPage/MovieDetailsPage'
@@ -11,6 +11,7 @@ import ProfilePage from './pages/profilepage/ProfilePage'
 import { MovieDataContext, InteractionContext } from './Context'
 import {  DiscoveredMovies, Genres_Movies } from './API/config/required';
 import { fetchedData } from './API/config/required'
+import LoadingPage from './pages/loadingpage/LoadingPage'
 
 
 const App = () => {
@@ -61,6 +62,7 @@ const App = () => {
           <BrowserRouter>
             <Routes>
               <Route path='/landing' element={<LandingPage/>}/>
+              <Route path='/loading' element={<LoadingPage/>}/>
               <Route path='/' element={<HomePage/>}/>
               <Route path='/search/' element={<SearchPage/>}/>
               <Route path='/movie/:id' element={<MovieDetailsPage/>}/>

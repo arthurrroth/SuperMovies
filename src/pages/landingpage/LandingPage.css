@@ -64,6 +64,7 @@
 }
 
 .BackGround {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -71,11 +72,11 @@
     background: radial-gradient(closest-side at 60% 55%, rgba(255, 255, 255));
 }
 
-.ellipsesvg {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.ellipsesvg1 {
     height: 60vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 

@@ -34,3 +34,7 @@
 .PreviewIcon:hover {
    fill: rgb(0, 224, 75);
 }
+
+.ellipse-style {
+    fill: white;
+}
