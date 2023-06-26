@@ -17,8 +17,8 @@ const MovieDetailsPage = () => {
   const navigate = useNavigate();
   const { detailedMovies } = useContext(MovieDataContext);
   const [selectedMovie, setSelectedMovie] = useState();
-  // const { id } = useParams()
-  const [id, setId] = useState(385687);
+  const { id } = useParams()
+  // const [id, setId] = useState(385687);
   const [seeMore, setSeeMore] = useState(false)
   
   

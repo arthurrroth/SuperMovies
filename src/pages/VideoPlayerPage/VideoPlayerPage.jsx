@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 // # ID anpassen ==============
 const VideoPlayerPage = () => {
   const navigate = useNavigate();
+  // const { id } = useParams()
   const [id, setId] = useState(385687);
   const [videoLink, setVideoLink] = useState()
 
