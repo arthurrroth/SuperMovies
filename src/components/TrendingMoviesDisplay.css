@@ -10,7 +10,6 @@
 
 .trending-title {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin: 10% 2% 5%;
 }
@@ -25,7 +24,7 @@
 
 .img-container {
     position: relative;
-    margin: 5% 5% 2% 5%;
+    /* margin: 5% 5% 2% 5%; */
     /* width: 100%; */
     height: 100%;
     cursor: pointer;
@@ -36,8 +35,8 @@
     object-fit: cover;
     object-position: top;
 
-    width: 80vw;
-    height: 70vw;
+    width: 82vw;
+    height: 95vw;
     bottom: 20%;
 }
 .circle-container {
@@ -79,6 +78,13 @@
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
+    margin-bottom: 5rem;
+}
+.circle:not(.current-circle):hover {
+    background-color: var(--element-color-bluegrey);
+}
+.current-circle:hover {
+    background-color: #fc2121ab;
 }
 
 .current-circle {
@@ -100,9 +106,30 @@
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 1000px) {
     .display-img {
-        width: 400px;
-        height: 300px;
+        width: 80vw;
+        height: 50rem;
+    }
+    .trending-title {
+        margin: 2% 2% 0 2%;
+    }
+    .trending-title h3 {
+        font-size: 3rem;
+    }
+    .trending-title p {
+        font-size: 2.5rem;
+    }
+    .circle {
+        height: 1.5vw;
+        width: 1.5vw;
+    }
+    .current-circle {
+        height: 1.5vw;
+        width: 3vw;
+        border-radius: 30rem;
+    }
+    .circle-container {
+        gap: 7px;
     }
   }
