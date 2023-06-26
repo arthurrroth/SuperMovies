@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import LandingPage from './pages/LandingPage'
+import LandingPage from './pages/landingpage/LandingPage'
+import LoadingPage from './pages/loadingpage/LoadingPage'
 import HomePage from './pages/HomePage'
 import SearchResultPage from './pages/SearchResultPage'
 import MovieDetailsPage from './pages/MovieDetailsPage'
@@ -71,6 +72,7 @@ const App = () => {
           <BrowserRouter>
             <Routes>
               <Route path='/landing' element={<LandingPage/>}/>
+              <Route path='/loading' element={<LoadingPage/>}/>
               <Route path='/' element={<HomePage/>}/>
               <Route path='/search/' element={<SearchResultPage/>}/>
               <Route path='/movie/:id' element={<MovieDetailsPage/>}/>
