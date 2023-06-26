@@ -1,0 +1,24 @@
+/* Search.css */
+
+.result-count {
+    padding: 0 5px;
+    align-self: flex-start;
+    
+}
+
+.result-count p {
+    font-size: 1.35rem;
+    font-family: "Poppins-Medium";
+    
+}
+
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 3rem 0 3rem;
+};
+

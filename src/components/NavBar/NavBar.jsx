@@ -1,4 +1,4 @@
-import "./NavBar.css";
+import "./FloatBar.css";
 
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
@@ -7,6 +7,7 @@ import Home from "../assets/icons/home_svg/Home";
 import Download from "../assets/icons/download_svg/Download";
 import Favorite from "../assets/icons/favorite_svg/Favorite";
 import Profile from "../assets/icons/profile_svg/Profile";
+
 
 const NavBar = () => {
   const [active, setActive] = useState("");

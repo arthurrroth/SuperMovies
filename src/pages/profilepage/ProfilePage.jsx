@@ -1,6 +1,8 @@
-import NavBar from "../../components/NavBar";
+import SearchBar from "../../components/Search/Elements/SearchBar";
+import SearchParameter from "../../components/Search/SearchParameter";
+
 import "./ProfilePage.css";
-import SearchSort from '../../components/SearchSort';
+import FloatNavBar from "../../components/NavBar/FloatNavBar";
 
 
 const ProfilePage = () => {
@@ -9,14 +11,15 @@ const ProfilePage = () => {
             <article className="profile-container">
                 <h2>Hello User!</h2>
             </article>
-            <SearchSort/>
+            <SearchBar/>
+            <SearchParameter/>
             <article className="favo-container">
             </article>
 
             <article className="downl-container">
 
             </article>
-            <NavBar />
+            <FloatNavBar />
         </section>
      );
 }
