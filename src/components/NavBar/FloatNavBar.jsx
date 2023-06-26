@@ -1,7 +1,7 @@
 import "./FloatBar.css";
 
 import { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Home from "../../assets/icons/home_svg/Home";
 import Download from "../../assets/icons/download_svg/Download";
@@ -10,7 +10,6 @@ import Profile from "../../assets/icons/profile_svg/Profile";
 
 const FloatNavBar = ({navEffect}) => {
   const [active, setActive] = useState("Home");
-  const location = useLocation();
 
   const buttonClick = (navText) => {
     setActive(navText);

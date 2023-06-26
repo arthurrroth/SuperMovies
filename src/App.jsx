@@ -7,7 +7,7 @@ import VideoPlayerPage from './pages/VideoPlayerPage'
 import { MovieDataContext, InteractionContext } from './Context'
 import {  DiscoveredMovies, Genres_Movies } from './API/config/required';
 import { fetchedData } from './API/config/required'
-import SearchPage from './components/Search/SearchPage'
+import SearchPage from './pages/SearchPage'
 
 
 const App = () => {

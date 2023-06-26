@@ -1,10 +1,10 @@
 
 import React, { useState, useContext } from "react";
-import { MovieDataContext } from "../../Context";
+import { MovieDataContext } from "../Context";
 import "./CSS/Search.css"
 
-import SearchContainer from "./SearchContainer";
-import FloatNavBar from "../NavBar/FloatNavBar";
+import SearchContainer from "../components/Search/SearchContainer";
+import FloatNavBar from "../components/NavBar/FloatNavBar";
 
 const SearchPage = () => {
   const {filteredMovies} = useContext(MovieDataContext);
