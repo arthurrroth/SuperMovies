@@ -93,11 +93,18 @@
 }
 
 .detailNav{
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
 }
 
+.detailLoading{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @media only screen and (min-width: 600px) {
 

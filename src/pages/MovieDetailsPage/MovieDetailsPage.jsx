@@ -30,13 +30,6 @@ const MovieDetailsPage = () => {
         setSelectedMovie(selectedMovie[0]);
       }
     }, []);
-    
-    // useEffect(() => {
-    //   console.log(id)
-    //   console.log({selectedMovie});
-    //   console.log(detailedMovies);
-    
-    // }, [selectedMovie])
 
     // Minutes in hours:minutes 
     const toHHMM = (totalMinutes) => {
@@ -121,8 +114,10 @@ const MovieDetailsPage = () => {
 
       ) : (
         <section>
-          <h2>Loading Data... 🍿</h2>
-          <NavBar />  
+          <h2 className='detailLoading'>Loading Data... 🍿</h2>
+          <div className='detailNav'>
+            <NavBar />  
+          </div>
         </section>
       )} 
     </section>
