@@ -10,7 +10,7 @@ import Star from '../../assets/icons/Star.svg'
 import PlayBtn from '../../assets/icons/PlayBtn.svg'
 
 // NavBar
-import NavBar from '../../components/NavBar.jsx'
+import NavBar from '../../components/NavBar/FloatNavBar'
 
 // # ID anpassen ==============
 const MovieDetailsPage = () => {
