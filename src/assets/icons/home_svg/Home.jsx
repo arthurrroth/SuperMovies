@@ -1,4 +1,5 @@
 import '../Icons.css';
+import React from 'react';
 
 const Home = (props) => {
 

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { InteractionContext, MovieDataContext } from "../../../Context";
 import { useState } from 'react';
 import '../CSS/Button.css'

@@ -1,6 +1,6 @@
 import "./FloatBar.css";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import Home from "../../assets/icons/home_svg/Home";
