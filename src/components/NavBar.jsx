@@ -3,10 +3,10 @@ import "./NavBar.css";
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
-import Home from "../../public/home_svg/Home";
-import Download from "../../public/download_svg/Download";
-import Favorite from "../../public/favorite_svg/Favorite";
-import Profile from "../../public/profile_svg/Profile";
+import Home from "../assets/icons/home_svg/Home";
+import Download from "../assets/icons/download_svg/Download";
+import Favorite from "../assets/icons/favorite_svg/Favorite";
+import Profile from "../assets/icons/profile_svg/Profile";
 
 const NavBar = () => {
   const [active, setActive] = useState("");
@@ -19,8 +19,8 @@ const NavBar = () => {
 
   const isHomePage =
     location.pathname === "/" ||
-    location.pathname === "/search:searchParam" ||
-    location.pathname.startsWith("/search");
+    location.pathname.startsWith("/search") ||
+    location.pathname === "/movie/:id";
 
   useEffect(() => {
     const handleResize = () => {

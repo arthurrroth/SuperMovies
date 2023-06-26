@@ -18,8 +18,8 @@ const App = () => {
   const [selectedMovie, setSelectedMovie] = useState();
   const [genresMovie, setGeneresMovie] = useState([]);
   const [clickedGenre, setClickedGenre] = useState([]);
-  const [favouritedMovies, setFavMovies] = useState([]);
-  const [downlaodedMovies, setDownloadedMovies] = useState([]);
+  const [favouritedMovies, setFavMovies] = useState(detailedMovies);
+  const [downlaodedMovies, setDownloadedMovies] = useState(detailedMovies);
 
     const run_Requiered = async () => {
 

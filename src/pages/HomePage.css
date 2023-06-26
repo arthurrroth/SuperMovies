@@ -1,9 +1,9 @@
 .home {
-    padding: 20px;
+    padding: var(--main-padding);
 }
 
 .home h1 {
-    margin-bottom: 20px;
+    margin-bottom: var(--main-padding);
 }
 
 .search-bar {

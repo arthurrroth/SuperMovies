@@ -1,0 +1,33 @@
+.fav-page-title {
+    display: flex;
+    align-items: center;
+    gap: 7.5px;
+}
+
+.fav-movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    padding: 3rem;
+}
+
+.fav-img {
+    /* height: 20vw;  */
+    width: 15vw; 
+    object-fit: contain;
+    border-radius: 1.5vw;
+}
+
+.fav-movie {
+    display: flex;
+}
+
+.info-container {
+    margin-top: auto;
+}
+.fav-description {
+    display: flex;
+    align-items: center;
+    gap: 7.5px;
+    margin-top: 10;
+}
