@@ -1,3 +1,4 @@
+import React from 'react';
 import NavBar from '../../components/NavBar/FloatNavBar'
 import SearchBar from '../../components/Search/Elements/SearchBar';
 import SearchParameter from '../../components/Search/SearchParameter';
