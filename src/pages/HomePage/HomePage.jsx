@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useContext } from "react";
 import TrendingMoviesDisplay from '../../components/TrendingMoviesDisplay'
 import './HomePage.css'
 import FloatNavBar from '../../components/NavBar/FloatNavBar';

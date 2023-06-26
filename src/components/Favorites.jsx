@@ -2,7 +2,6 @@ import './Favorites.css'
 
 import { MovieDataContext } from '../Context';
 import { useContext, useState, useEffect } from 'react';
-import Star from '../assets/img/Star.png';
 
 
 const Favorites = () => {
@@ -32,7 +31,7 @@ const Favorites = () => {
                     <h5>{movie.title}</h5>
                   </div>
                   <div className='fav-description'>
-                    <img src={Star} alt="" />
+                    <p>⭐️</p>
                     <p>{(movie.vote_average).toFixed(1)}</p>
                     <p>•</p>
                     <p>{(movie.release_date).split("-")[0]}</p>

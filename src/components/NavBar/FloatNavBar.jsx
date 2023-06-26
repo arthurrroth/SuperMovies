@@ -24,14 +24,16 @@ const FloatNavBar = ({navEffect}) => {
       </div>
 
       <div className="download-container">
-        <NavLink onClick={() => buttonClick("Downloads")}>
+        <NavLink
+          to="/download"
+        onClick={() => buttonClick("Downloads")}>
           <Download active={active}/>
         </NavLink>
       </div>
 
       <div className="favorite-container">
         <NavLink
-          // to="/favorite"
+          to="/favorite"
           onClick={() => buttonClick("Favorites")}>
           <Favorite active={active}/>
         </NavLink>
@@ -40,7 +42,7 @@ const FloatNavBar = ({navEffect}) => {
 
       <div className="profile-container">
         <NavLink
-          // to="/profile"
+          to="/profile"
           onClick={() => buttonClick("Profile")}
         >
           <Profile active={active}/>
