@@ -1,12 +1,25 @@
-import NavBar from "../../components/NavBar";
+import SearchBar from "../../components/Search/Elements/SearchBar";
+import SearchParameter from "../../components/Search/SearchParameter";
+
 import "./ProfilePage.css";
-import SearchSort from '../../components/SearchSort';
+import FloatNavBar from "../../components/NavBar/FloatNavBar";
+
+
 const ProfilePage = () => {
     return ( 
         <section>
-            <SearchSort/>
-            <h2>Profile</h2>
-            <NavBar />
+            <article className="profile-container">
+                <h2>Hello User!</h2>
+            </article>
+            <SearchBar/>
+            <SearchParameter/>
+            <article className="favo-container">
+            </article>
+
+            <article className="downl-container">
+
+            </article>
+            <FloatNavBar />
         </section>
      );
 }

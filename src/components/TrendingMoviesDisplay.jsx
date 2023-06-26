@@ -4,7 +4,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 
-import Star from '../../public/Star.png'
+import Star from '../assets/img/Star.png'
 
 const TrendingMoviesDisplay = () => {
   const options = {

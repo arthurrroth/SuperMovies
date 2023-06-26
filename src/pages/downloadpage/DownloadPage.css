@@ -1,0 +1,27 @@
+.dl-movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    padding: 3rem;
+}
+
+.dl-img {
+    /* height: 20vw;  */
+    width: 15vw; 
+    object-fit: contain;
+    border-radius: 1.5vw;
+}
+
+.dl-movie {
+    display: flex;
+}
+
+.dl-container {
+    margin-top: auto;
+}
+.dl-description {
+    display: flex;
+    align-items: center;
+    gap: 7.5px;
+    margin-top: 10;
+}
