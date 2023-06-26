@@ -19,9 +19,12 @@ const App = () => {
   const [selectedMovie, setSelectedMovie] = useState();
   const [genresMovie, setGeneresMovie] = useState([]);
   const [clickedGenre, setClickedGenre] = useState([]);
-  const [favouritedMovies, setFavMovies] = useState(detailedMovies);
-  const [downlaodedMovies, setDownloadedMovies] = useState(detailedMovies);
+  const [favouritedMovies, setFavMovies] = useState([]);
+  const [downloadedMovies, setDownloadedMovies] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState(detailedMovies);
+
+
+
     
   const run_Requiered = async () => {
 
@@ -53,7 +56,7 @@ const App = () => {
         <MovieDataContext.Provider value={{detailedMovies, setDetailedMovies,
                                            selectedMovie, setSelectedMovie,
                                            genresMovie, favouritedMovies, 
-                                           setFavMovies, downlaodedMovies, 
+                                           setFavMovies, downloadedMovies, 
                                            setDownloadedMovies, filteredMovies, setFilteredMovies}}>
           <BrowserRouter>
             <Routes>

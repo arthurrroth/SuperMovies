@@ -36,7 +36,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <section className="navbar">
+    <section className={navEffect? "navbar-hidden" : "navbar"}>
       <article className="home-container">
         <NavLink to="/" onClick={() => buttonClick("Home")}>
           <Home

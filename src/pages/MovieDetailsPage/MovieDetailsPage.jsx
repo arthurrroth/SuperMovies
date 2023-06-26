@@ -18,7 +18,7 @@ const MovieDetailsPage = () => {
   const { detailedMovies } = useContext(MovieDataContext);
   const [selectedMovie, setSelectedMovie] = useState();
   // const { id } = useParams()
-  const [id, setId] = useState(385687);
+  const [id, setId] = useState([]);
   const [seeMore, setSeeMore] = useState(false)
   
   
@@ -31,7 +31,7 @@ const MovieDetailsPage = () => {
     
         setSelectedMovie(selectedMovie[0]);
       }
-    }, []);
+    }, [detailedMovies, id]);
     
     useEffect(() => {
       console.log({selectedMovie});

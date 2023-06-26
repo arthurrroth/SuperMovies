@@ -3,8 +3,14 @@ import React from 'react';
 
 const Download = (props) => {
 
+  let onSave;
+
+  if (props.active == "Preview") { 
+      onSave=props.handleDownload
+     }
+
   return (
-    <div className='NavBarElement'>
+    <div onClick={onSave} className='NavBarElement'>
     <svg 
       width="18" 
       height="22" 

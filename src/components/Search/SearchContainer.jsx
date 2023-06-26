@@ -20,10 +20,13 @@ const SearchContainer = ({setNavEffect}) => {
     if (ResultsContainerRef.current) {
       ResultsContainerRef?.current.addEventListener("scroll", handleScroll);
       return () => {
-        ResultsContainerRef?.current.removeEventListener("scroll", handleScroll);
+        if (ResultsContainerRef.current) {
+          ResultsContainerRef.current.removeEventListener("scroll", handleScroll);
+        }
+        // ResultsContainerRef?.current.removeEventListener("scroll", handleScroll);
       }
     } 
-  }, [ResultsContainerRef]);
+  }, []);
 
   useEffect(() => {
     if (scrollPosition > 50) {
