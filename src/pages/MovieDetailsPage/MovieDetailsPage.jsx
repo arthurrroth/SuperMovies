@@ -17,27 +17,26 @@ const MovieDetailsPage = () => {
   const navigate = useNavigate();
   const { detailedMovies } = useContext(MovieDataContext);
   const [selectedMovie, setSelectedMovie] = useState();
-  const { id } = useParams()
-  // const [id, setId] = useState(385687);
-  const [seeMore, setSeeMore] = useState(false)
-  
+  const { id } = useParams();
+  const [seeMore, setSeeMore] = useState(false);
   
     // Get data
     useEffect(() => {
       if (detailedMovies) {
         let selectedMovie = detailedMovies.filter(movie => {
-          return movie.id === id ;
+          return movie.id === parseInt(id);
         });
     
         setSelectedMovie(selectedMovie[0]);
       }
     }, []);
     
-    useEffect(() => {
-      console.log({selectedMovie});
-      console.log(detailedMovies);
+    // useEffect(() => {
+    //   console.log(id)
+    //   console.log({selectedMovie});
+    //   console.log(detailedMovies);
     
-    }, [selectedMovie])
+    // }, [selectedMovie])
 
     // Minutes in hours:minutes 
     const toHHMM = (totalMinutes) => {
@@ -108,11 +107,14 @@ const MovieDetailsPage = () => {
               </div>
             </div>
 
-            <Link to={"/movie/:id/video-player"} className='detailPlayBtn'> <img src={PlayBtn} alt='Play'/>
+            <Link to={`/movie/${id}/video-player`} className='detailPlayBtn'> <img src={PlayBtn} alt='Play'/>
             Watch Trailer</Link>
-          </article>
 
+          <div className='detailNav'>
           <NavBar />
+          </div>
+
+          </article>
 
         </div>
       </article>

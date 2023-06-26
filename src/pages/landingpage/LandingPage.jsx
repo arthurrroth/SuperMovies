@@ -2,7 +2,6 @@ import React from 'react'
 import "./LandingPage.css"
 import LandingImage1 from '../../assets/img/home.png'
 import LandingImage2 from '../../assets/img/description.png'
-import ellipsesvg1 from '../../assets/svg/ellipse.svg';
 
 const LandingPage = () => {
   return (

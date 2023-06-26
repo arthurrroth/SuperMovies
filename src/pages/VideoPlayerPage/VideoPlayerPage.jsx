@@ -1,15 +1,13 @@
 import './VideoPlayerPage.css'
 import BackArrow from '../../assets/icons/BackArrow-Detail.svg'
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate, useParams } from 'react-router-dom';
 
 // # ID anpassen ==============
 const VideoPlayerPage = () => {
   const navigate = useNavigate();
-  // const { id } = useParams()
-  const [id, setId] = useState(385687);
-  const [videoLink, setVideoLink] = useState()
+  const { id } = useParams();
+  const [videoLink, setVideoLink] = useState();
 
   useEffect(() => {
     const options = {
@@ -28,6 +26,7 @@ const VideoPlayerPage = () => {
       })
       .catch(err => console.error(err));
   },[])
+  console.log(id)
 
   return (
     <>
@@ -39,10 +38,10 @@ const VideoPlayerPage = () => {
         src={`https://www.youtube.com/embed/${videoLink}?&autoplay=1`}
         title="Trailer"
         fullscreen="true"
-        allowfullscreen="allowfullscreen"
-        frameborder="0"
-        gyroscope
-        picture-in-picture
+        allowFullScreen="allowFullScreen"
+        frameBorder="0"
+        gyroscope="true"
+        picture-in-picture="true"
         width="100%"
         height="100%"
         ></iframe>

@@ -17,6 +17,7 @@
     padding: 2rem 0 0 2rem;
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .detailHeader{
@@ -89,6 +90,12 @@
     font-size: 1.8rem;
     padding: 15px 35px;
     gap: 20px;
+}
+
+.detailNav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 
