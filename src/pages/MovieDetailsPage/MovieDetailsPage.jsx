@@ -17,15 +17,8 @@ const MovieDetailsPage = () => {
   const navigate = useNavigate();
   const { detailedMovies } = useContext(MovieDataContext);
   const [selectedMovie, setSelectedMovie] = useState();
-<<<<<<< HEAD
-  // const { id } = useParams()
-  const [id, setId] = useState([]);
-  const [seeMore, setSeeMore] = useState(false)
-  
-=======
   const { id } = useParams();
   const [seeMore, setSeeMore] = useState(false);
->>>>>>> ddeaddf31bd405c1882586e14eeb041764d5741d
   
     // Get data
     useEffect(() => {
@@ -36,17 +29,13 @@ const MovieDetailsPage = () => {
     
         setSelectedMovie(selectedMovie[0]);
       }
-<<<<<<< HEAD
     }, [detailedMovies, id]);
     
     useEffect(() => {
       console.log({selectedMovie});
       console.log(detailedMovies);
     
-    }, [selectedMovie])
-=======
     }, []);
->>>>>>> ddeaddf31bd405c1882586e14eeb041764d5741d
 
     // Minutes in hours:minutes 
     const toHHMM = (totalMinutes) => {
