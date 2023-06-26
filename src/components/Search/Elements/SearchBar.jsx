@@ -103,7 +103,7 @@ const SearchBar = () => {
     <div className='search-bar' style={SearchBarBorder} >
             <input 
             type="text"
-            placeholder='SearchCopy' 
+            placeholder='Search' 
             style={placeholderColor}
             onChange={(e) => {handleSearchInput(e.target.value)}}
             onFocus={() => handleFocus()}
