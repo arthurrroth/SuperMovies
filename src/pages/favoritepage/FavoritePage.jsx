@@ -3,6 +3,7 @@ import './FavoritePage.css'
 
 import FloatNavBar from '../../components/NavBar/FloatNavBar'
 import Favorites from '../../components/Favorites'
+import React from 'react';
 import SearchBar from '../../components/Search/Elements/SearchBar';
 import SearchParameter from '../../components/Search/SearchParameter';
 
