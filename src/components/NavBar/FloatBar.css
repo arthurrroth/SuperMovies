@@ -1,0 +1,49 @@
+.dl-text, .home-text, .favorite-text, .profile-text {
+    color: var(--element-color-red);
+    padding-left: 1.5rem;
+    font-family: "Poppins-Bold", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+.navbar {
+    display: flex;
+    width: 90%;
+    max-width: 497px ;
+    height: 10%;
+    max-height: 60px ;
+    padding: 20px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-around;
+    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+    background-color: #f6e5e5;
+}
+
+.navbar-hidden {
+    display: flex;
+    width: 0%;
+    max-width: 497px ;
+    opacity: 0;
+    height: 0%;
+    max-height: 60px ;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-around;
+    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+    background-color: #f6e5e5;
+}
+
+.home-container, .download-container, .favorite-container, .profile-container {
+    display: flex;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-color-red);
+}
+.navbar-hidden a {
+    text-decoration: none;
+    color: var(--text-color-red);
+}
+

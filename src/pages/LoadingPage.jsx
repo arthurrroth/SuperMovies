@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
 
 const LoadingPage = () => {
+  const {favoritedMovies, setFavMovies} = useContext(MovieDataContext)
+
   return (
-    <div>LoadingPage</div>
+    <div>
+      {favoritedMovies}
+    </div>
   )
 }
 

@@ -1,18 +1,19 @@
 import React from 'react'
-
-import NavBar from '../components/NavBar'
 import TrendingMoviesDisplay from '../components/TrendingMoviesDisplay'
-import SearchSort from '../components/SearchSort';
-import './HomePage.css'
-import { Link } from 'react-router-dom';
+import './CSS/HomePage.css'
+import FloatNavBar from '../components/NavBar/FloatNavBar';
+import SearchBar from '../components/Search/Elements/SearchBar';
+import SearchParameter from '../components/Search/SearchParameter';
 
 const HomePage = () => {
+
   return (
     <div className='home'>
         <h1>Welcome</h1>
-        <SearchSort/>
+        <SearchBar/>
+        <SearchParameter/>
         <TrendingMoviesDisplay/>
-        <NavBar />
+        <FloatNavBar />
     </div>
   )
 }
