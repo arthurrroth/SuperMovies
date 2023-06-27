@@ -1,0 +1,120 @@
+/* HomePage.module.css */
+.homePageContainer {
+    width: 100vw;
+    height: 100vh;
+    min-width: 500px;
+    display: grid;
+    grid-template-rows: repeat(3, 55vh 30vh 12vh);
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    background-color: rgb(237, 56, 56);
+    
+  }
+  
+  .titleDisplay {
+    height: 100%;
+    width: 100%;
+    max-height: 750px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .trendingGrid {
+    align-items: center;
+    position: relative;
+    padding: 0 2rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 10px;
+    overflow-x: auto;
+    background-color: rgb(218, 23, 23);
+    
+  }
+
+  .gridItem {
+      animation: scroll var(--animation-duration) linear infinite;
+    
+  }
+  
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+
+  .trendingGrid h2 {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    color: rgb(110, 0, 0);
+    font-size: 2rem;
+  }
+
+  .floatBarWrapper {
+    background-color: rgb(237, 56, 56);
+    padding: 0 3rem 0rem 3rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .floatBarWrapper h1 {
+    color: white;
+    font-size: 3rem;
+    justify-self: center;
+    padding-bottom: 15px;
+  }
+  .display {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .darkFade {
+    left: 0;
+    position: absolute;
+    height: 55%;
+    width: 45%;
+    background: linear-gradient(to left, rgb(255, 255, 255) ,transparent);
+    z-index: 5;
+  }
+
+  .imgText {
+    display: flex;
+    
+  }
+
+  .imgText article {
+    padding-top: 10%;
+    padding-right: 3%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgText h1 {
+    font-size: 3rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    
+  }
+
+  .imgText p{
+    width: 100%;
+    
+  }
+
+  .imgText img {
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+  }

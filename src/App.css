@@ -1,0 +1,139 @@
+
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Page Styling */
+
+    .page-container {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 3rem 1rem 3rem;
+    };
+
+
+
+    .search-and-results-container {
+        position: relative;
+        width: 100%;
+        padding: 8px 8px 8px 8px;
+        height: 100%;
+        overflow: hidden;
+        overflow-y: scroll;
+    };
+    
+    .bottom-fade {
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        height: 3rem;
+        background: linear-gradient(to top, white, rgba(255, 255, 255, 0.588) , rgba(255, 255, 255, 0.389),transparent );
+        bottom: 0;
+    };
+
+    .top-fade {
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        height:2rem;
+        background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.588) , rgba(255, 255, 255, 0.389),transparent );
+        top: 0;
+    };
+    
+    .result-count {
+        font-size: 1rem;
+        padding: 0 20px;
+        align-self: flex-start;
+        
+    };
+    
+    .top-left-cell {
+        position:sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        padding: 10px;
+        border-radius: 10px;
+        transition: top 0.3s ease, opacity 0.3s ease;
+    
+      };
+
+    .top-left-cell-scrolled {
+        opacity: 0;
+        position: sticky;
+        top: 30px;
+        left: 0;
+        z-index: 1;
+        padding: 10px;
+        border-radius: 10px;
+        transition: top 0.3s ease, opacity 0.3s ease;
+
+      };
+    
+    
+    .container-layout {
+        position: relative;
+        display: grid;
+        height: 100%;
+        gap: 10px;
+        row-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(392px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(120px, 120px));
+    
+    };
+    
+    .search-inputs {
+        width: 100%;
+    };
+    
+    .search-sort-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+    };
+    
+    #hide-scrollbar-y {
+        overflow-y: scroll;
+        overflow-x: hidden;
+      };
+      
+    #hide-scrollbar-y::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+    };
+      
+    #hide-scrollbar-x {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    };
+
+    .effect-wrapper-vertical {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 0.8rem;
+    };
+
+
+
+/* Element Styling */
+
+    /* Result Counter */
+
+    .result-count {
+        padding: 0 5px;
+    };
+    
+    .result-count p {
+        font-size: 1.35rem;
+        font-family: "Poppins-Medium";
+        
+    };
