@@ -1,13 +1,17 @@
+import { AppContext } from '../../assets/Context';
 import './LoadingPage.css';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 
 
 const LoadingPage = () => {
+
+  const {setLoading} = useContext(AppContext);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       window.location.href = '/landing';
-    }, 5000);
-
+    }, 3000);
+    setLoading(false);
     return () => clearTimeout(timer);
   }, []);
   

@@ -30,6 +30,7 @@ const App = () => {
   const [searchEffect, setSearchEffect] = useState(false);
 
   const [active, setActive] = useState('Home');
+  const [loading, setLoading] = useState(true);
   
 
   // API Data
@@ -80,23 +81,44 @@ const App = () => {
 
 
   return (
-    <AppContext.Provider value={{trendsTriggered, setTrendsTriggered,
-                                 searchEffect, setSearchEffect,
-                                 active, setActive}}>
-      <MovieDataContext.Provider value={{movies, trendingMovies, movieGenres,
-                                        filteredMovies, setFilteredMovies,
-                                        selectedGenres, setSelectedGenres }}>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<HomePage/>}/>
-            <Route path='/search' element={<SearchPage/>}/>
-            <Route path='/movie/:id' element={<MovieDetailsPage/>}/>
-            <Route path='/movie/:id/video-player' element={<VideoPlayerPage/>}/>
-            <Route path='/loading' element={<LoadingPage/>}/>
-            <Route path='/landing' element={<LandingPage/>}/>
-          </Routes>
-        </BrowserRouter>
-      </MovieDataContext.Provider>
+    <AppContext.Provider
+      value={{
+        trendsTriggered,
+        setTrendsTriggered,
+        searchEffect,
+        setSearchEffect,
+        active,
+        setActive,
+        loading,
+        setLoading
+      }}
+    >
+      <BrowserRouter>
+        {loading ? (
+          <LoadingPage />
+        ) : (
+          <MovieDataContext.Provider
+            value={{
+              movies,
+              trendingMovies,
+              movieGenres,
+              filteredMovies,
+              setFilteredMovies,
+              selectedGenres,
+              setSelectedGenres,
+            }}
+          >
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/movie/:id" element={<MovieDetailsPage />} />
+              <Route path="/movie/:id/video-player" element={<VideoPlayerPage />} />
+              <Route path="/loading" element={<LoadingPage />} />
+              <Route path="/landing" element={<LandingPage />} />
+            </Routes>
+          </MovieDataContext.Provider>
+        )}
+      </BrowserRouter>
     </AppContext.Provider>
   )
 }
