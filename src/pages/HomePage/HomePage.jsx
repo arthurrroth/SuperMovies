@@ -52,7 +52,7 @@ const HomePage = () => {
           )}
         </article>
       </div>
-      <div className={styles.trendingGrid}>
+      <div className={styles.trendingGrid} id="hide-scrollbar-x">
         <h2>Trending Movies</h2>
       {trendingMovies?.map((movie, index) => (
                  <div
