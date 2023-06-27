@@ -102,7 +102,7 @@ const MovieDetailsPage = () => {
             </div>
 
             <Link to={`/movie/${id}/video-player`} className='detailPlayBtn'> <img src={PlayBtn} alt='Play'/>
-            Watch Trailer</Link>
+            Behind the Scenes</Link>
 
           </article>
         </div>  

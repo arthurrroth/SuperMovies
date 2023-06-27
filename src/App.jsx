@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import './App.css'
+
 
 //Pages
 import SearchPage from './pages/SearchPage';
 import HomePage from './pages/HomePage/HomePage';
-
+import VideoPlayerPage from './pages/VideoPlayerPage/VideoPlayerPage';
+import LoadingPage from './pages/loadingpage/LoadingPage';
+import LandingPage from './pages/landingpage/LandingPage';
 // API related imports
 import { DiscoveredMovies, TrendingMovies, MovieGenres } from './API'
 import { fetchedData } from './API'
@@ -27,6 +30,7 @@ const App = () => {
   const [searchEffect, setSearchEffect] = useState(false);
 
   const [active, setActive] = useState('Home');
+  
 
   // API Data
   const [discoveredMovies, setDiscoveredMovies] = useState([]);
@@ -87,6 +91,9 @@ const App = () => {
             <Route path='/' element={<HomePage/>}/>
             <Route path='/search' element={<SearchPage/>}/>
             <Route path='/movie/:id' element={<MovieDetailsPage/>}/>
+            <Route path='/movie/:id/video-player' element={<VideoPlayerPage/>}/>
+            <Route path='/loading' element={<LoadingPage/>}/>
+            <Route path='/landing' element={<LandingPage/>}/>
           </Routes>
         </BrowserRouter>
       </MovieDataContext.Provider>

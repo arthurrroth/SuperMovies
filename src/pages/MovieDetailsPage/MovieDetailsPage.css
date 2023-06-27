@@ -99,7 +99,7 @@
 
 /* #Watch Trailer Btn */
 .detailPlayBtn{
-    width: 226.05px;
+    width: fit-content;
     margin: 4rem auto;
     display: flex;
     justify-content: space-around;
@@ -110,6 +110,11 @@
     font-size: 1.8rem;
     padding: 15px 35px;
     gap: 20px;
+    transition: border 0.3s ease-in-out;
+}
+
+.detailPlayBtn:hover {
+    border: 1.5px solid rgb(179, 6, 6);
 }
 
 
