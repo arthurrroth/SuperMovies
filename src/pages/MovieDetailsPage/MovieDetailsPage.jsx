@@ -12,32 +12,30 @@ import PlayBtn from '../../assets/icons/PlayBtn.svg'
 // NavBar
 import NavBar from '../../components/NavBar/FloatNavBar'
 
-
+// # ID anpassen ==============
 const MovieDetailsPage = () => {
   const navigate = useNavigate();
   const { detailedMovies } = useContext(MovieDataContext);
   const [selectedMovie, setSelectedMovie] = useState();
-  // const { id } = useParams()
-  const [id, setId] = useState(385687);
-  const [seeMore, setSeeMore] = useState(false)
-  
+  const { id } = useParams();
+  const [seeMore, setSeeMore] = useState(false);
   
     // Get data
     useEffect(() => {
       if (detailedMovies) {
         let selectedMovie = detailedMovies.filter(movie => {
-          return movie.id === id ;
+          return movie.id === parseInt(id);
         });
     
         setSelectedMovie(selectedMovie[0]);
       }
-    }, []);
+    }, [detailedMovies, id]);
     
     useEffect(() => {
       console.log({selectedMovie});
       console.log(detailedMovies);
     
-    }, [selectedMovie])
+    }, []);
 
     // Minutes in hours:minutes 
     const toHHMM = (totalMinutes) => {
@@ -51,13 +49,12 @@ const MovieDetailsPage = () => {
     
 
   return (
-    <>
+    <section className='movieDetailPage'>
     {selectedMovie ? (
       <article className='detailPage'>
         <div className='detailBackgroundContainer'
           style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${selectedMovie.poster_path})`}} >
         
-          {/* <Link to={"/"} className='detailGoBack'><img src={BackArrow} alt="Go Back" /></Link> */}
           <button onClick={() => navigate(-1)} className='detailGoBack'><img src={BackArrow} alt="Go Back" /></button>
 
           <div className='detailHeader'>
@@ -109,22 +106,27 @@ const MovieDetailsPage = () => {
               </div>
             </div>
 
-            <Link to={"/movie/:id/video-player"} className='detailPlayBtn'> <img src={PlayBtn} alt='Play'/>
+            <Link to={`/movie/${id}/video-player`} className='detailPlayBtn'> <img src={PlayBtn} alt='Play'/>
             Watch Trailer</Link>
-          </article>
 
+          <div className='detailNav'>
           <NavBar />
+          </div>
+
+          </article>
 
         </div>
       </article>
 
       ) : (
         <section>
-          <h2>Loading Data... 🍿</h2>
-          <NavBar />  
+          <h2 className='detailLoading'>Loading Data... 🍿</h2>
+          <div className='detailNav'>
+            <NavBar />  
+          </div>
         </section>
       )} 
-    </>
+    </section>
   )
 }
 

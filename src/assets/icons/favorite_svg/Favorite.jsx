@@ -3,8 +3,14 @@ import React from 'react';
 
 const Favorite = (props) => {
 
+  let onSave;
+
+  if (props.active == "Favorite") {
+      onSave=props.handleFavorite
+  }
+
   return (
-    <div className='NavBarElement'>
+    <div onClick={onSave} className='NavBarElement'>
       <svg
         width="16"
         height="20"

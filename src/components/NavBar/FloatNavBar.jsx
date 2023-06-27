@@ -1,7 +1,7 @@
 import "./FloatBar.css";
 
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import Home from "../../assets/icons/home_svg/Home";
 import Download from "../../assets/icons/download_svg/Download";
@@ -10,16 +10,22 @@ import Profile from "../../assets/icons/profile_svg/Profile";
 
 const FloatNavBar = ({navEffect}) => {
   const [active, setActive] = useState("Home");
+  const location = useLocation();
 
   const buttonClick = (navText) => {
     setActive(navText);
   };
 
+  // const isHomePage =
+  //   location.pathname === "/" ||
+  //   location.pathname.startsWith("/search") ||
+  //   location.pathname.startsWith ("/movie/");
+
   return (
-    <section className={navEffect? "navbar-hidden" : "navbar"}>
+    <section className={navEffect ? "navbar-hidden" : "navbar"}>
       <div className="home-container">
         <NavLink to="/" onClick={() => buttonClick("Home")}>
-          <Home active = {active}/>
+          <Home active= {active}/>
         </NavLink>
       </div>
 

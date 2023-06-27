@@ -18,9 +18,9 @@ const LandingPage = () => {
         <h2>Enjoy Your Movie</h2>
         <h2>Watch Everywhere</h2>
         <div className='LandingP'>
-            <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+          <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
         </div>
-          <button className="LandingButton">Get Started</button>
+        <button className="LandingButton">Get Started</button>
       </div>
     </div>
   )
