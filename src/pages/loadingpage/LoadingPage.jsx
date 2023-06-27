@@ -4,7 +4,14 @@ import './LoadingPage.css';
 const LoadingPage = () => {
   
   return (
-    <div className='mov'><p>.MOV</p></div>
+    <>
+    <div class="loader">
+			<span>.</span>
+			<span>M</span>
+			<span>O</span>
+			<span>V</span>
+		</div>
+    </>
   )
 }
 

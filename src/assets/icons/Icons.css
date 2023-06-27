@@ -35,6 +35,16 @@
    fill: rgb(0, 224, 75);
 }
 
+/* Landingpage Ellipse */
 .ellipse-style {
-    fill: white;
-}
+    filter: blur(3rem); 
+    mask: url(#ellipse-mask);
+    fill: #CAF6E7;
+  }
+/* Media querays Desktop von Ellipse-style */
+  @media (min-width: 768px) {
+    .ellipse-style {
+      display: none;
+    }
+  }
+
